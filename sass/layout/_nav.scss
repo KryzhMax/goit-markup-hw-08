@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav__site-nav {
+  display: flex;
+  padding: 0;
+  margin-left: 93px;
+  --card-gap: 50px;
+}
+
+.nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+
+  transition: color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

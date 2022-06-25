@@ -1,0 +1,38 @@
+.contacts {
+  align-items: center;
+
+  --card-item: 2;
+  --card-gap: 30px;
+}
+
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.contacts__info {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  font-size: 14px;
+
+  color: var(--main-color);
+  transition: color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
