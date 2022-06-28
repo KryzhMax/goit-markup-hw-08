@@ -3,6 +3,9 @@
 
   --card-item: 2;
   --card-gap: 30px;
+  @include mq(mob-only) {
+    display: none;
+  }
 }
 
 .contacts__icon {

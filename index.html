@@ -26,6 +26,29 @@
           <a class="logo logo__primary" href="./index.html" lang="en"
             >Web<span class="logo logo__secondary--dark">Studio</span></a
           >
+          <button
+            type="button"
+            class="menu-button is-open"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg
+              class="menu-open__icon"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+              aria-controls="menu-container"
+            >
+              <use class="icon-menu" href="./images/styles.svg#icon-menu"></use>
+              <use
+                class="icon-menu-cross"
+                href="./images/styles.svg#icon-menu-close"
+              ></use>
+            </svg>
+          </button>
+          <div class="menu-container is-open" id="menu-container" data-menu>
+            <div class="menu-top"></div>
+          </div>
           <ul class="nav__site-nav card-set">
             <li class="nav__item">
               <a class="nav__link link current" href="./index.html">Студия</a>
@@ -60,7 +83,7 @@
     </header>
     <main>
       <!-- Герой -->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button
@@ -73,9 +96,9 @@
             Заказать услугу
           </button>
         </div>
-      </section>
+      </section> -->
       <!-- Преимущества -->
-      <section class="advantages">
+      <section class="section advantages">
         <div class="container">
           <h2 class="visually-hidden">Чем мы лучше</h2>
           <ul class="advantages__list card-set">
@@ -218,6 +241,7 @@
             </li>
             <li class="team__item card-set-item">
               <img
+                class="team__userpic"
                 src="./images/img1.jpg"
                 alt="фронт-энд разработчик"
                 width="270"
@@ -258,7 +282,12 @@
               </div>
             </li>
             <li class="team__item card-set-item">
-              <img src="./images/img2.jpg" alt="маркетинг" width="270" />
+              <img
+                class="team__userpic"
+                src="./images/img2.jpg"
+                alt="маркетинг"
+                width="270"
+              />
               <div class="team__text-wrapper">
                 <h3 class="team__member">Николай Тарасов</h3>
                 <p class="team__position" lang="en">Marketing</p>
@@ -295,7 +324,12 @@
               </div>
             </li>
             <li class="team__item card-set-item">
-              <img src="./images/img3.jpg" alt="дизайнер" width="270" />
+              <img
+                class="team__userpic"
+                src="./images/img3.jpg"
+                alt="дизайнер"
+                width="270"
+              />
               <div class="team__text-wrapper">
                 <h3 class="team__member">Михаил Ермаков</h3>
                 <p class="team__position" lang="en">UI Designer</p>
@@ -338,42 +372,42 @@
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
           <ul class="clients__list card-set">
-            <li class="card-set-item">
+            <li class="card-set-item clients__item">
               <a href="" class="clients__link">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg#icon-square"></use>
                 </svg>
               </a>
             </li>
-            <li class="card-set-item">
+            <li class="card-set-item clients__item">
               <a href="" class="clients__link">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg#icon-company"></use>
                 </svg>
               </a>
             </li>
-            <li class="card-set-item">
+            <li class="card-set-item clients__item">
               <a href="" class="clients__link">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg#icon-jellyfish"></use>
                 </svg>
               </a>
             </li>
-            <li class="card-set-item">
+            <li class="card-set-item clients__item">
               <a href="" class="clients__link">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg#icon-foster"></use>
                 </svg>
               </a>
             </li>
-            <li class="card-set-item">
+            <li class="card-set-item clients__item">
               <a href="" class="clients__link">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg#icon-brand"></use>
                 </svg>
               </a>
             </li>
-            <li class="card-set-item">
+            <li class="card-set-item clients__item">
               <a href="" class="clients__link">
                 <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg#icon-tagline"></use>
@@ -386,57 +420,59 @@
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer-item">
-          <a class="logo logo__primary" href="./index.html" lang="en"
-            >Web<span class="logo logo__secondary--white">Studio</span></a
-          >
-          <address class="address">
-            г. Киев, пр-т Леси Украинки, 26
-            <a class="address__link link" href="mailto:info@example.com"
-              >info@example.com</a
+        <div class="footer-item-wrapper">
+          <div class="footer-item card-set-item">
+            <a class="logo logo__primary" href="./index.html" lang="en"
+              >Web<span class="logo logo__secondary--white">Studio</span></a
             >
-            <a class="address__link link" href="tel:+380961111111"
-              >+38 099 111 11 11</a
-            >
-          </address>
+            <address class="address">
+              г. Киев, пр-т Леси Украинки, 26
+              <a class="address__link link" href="mailto:info@example.com"
+                >info@example.com</a
+              >
+              <a class="address__link link" href="tel:+380961111111"
+                >+38 099 111 11 11</a
+              >
+            </address>
+          </div>
+          <div class="footer-item footer-item--right card-set-item">
+            <b class="footer-item__title">Присоединяйтесь</b>
+            <ul class="footer-item__list card-set">
+              <li class="footer-item__soc">
+                <a href="" class="footer__link">
+                  <svg class="footer__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-item__soc">
+                <a href="" class="footer__link">
+                  <svg class="footer__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-item__soc">
+                <a href="" class="footer__link">
+                  <svg class="footer__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-item__soc">
+                <a href="" class="footer__link">
+                  <svg class="footer__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-item">
-          <b class="footer-item__title">Присоединяйтесь</b>
-          <ul class="footer-item__list card-set">
-            <li class="footer-item__soc">
-              <a href="" class="footer__link">
-                <svg class="footer__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-item__soc">
-              <a href="" class="footer__link">
-                <svg class="footer__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-item__soc">
-              <a href="" class="footer__link">
-                <svg class="footer__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-item__soc">
-              <a href="" class="footer__link">
-                <svg class="footer__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-item">
+        <div class="footer-item card-set-item">
+          <b class="footer-item__title">Подпишитесь на рассылку</b>
           <form class="subscribe-form">
-            <label>
-              <b class="footer-item__title">Подпишитесь на рассылку</b>
+            <label class="subscribe-form__label">
               <input
                 type="email"
                 name="email"
@@ -559,5 +595,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

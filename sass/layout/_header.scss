@@ -1,5 +1,6 @@
 .header {
   border-bottom: 1px solid #ececec;
+  position: relative;
 }
 
 .header__container {
@@ -8,4 +9,47 @@
 
 .header__contacts {
   margin-left: auto;
+}
+
+.menu-button {
+  position: absolute;
+  display: inline-flex;
+  background-color: transparent;
+  border: transparent;
+  top: 0;
+  right: 15px;
+  margin-top: 10px;
+  padding: 0;
+  margin-right: 15px;
+}
+
+.menu-button .icon-menu-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-menu-cross {
+  display: block;
+}
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+.menu-button .icon-menu {
+  display: block;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #ccc;
+  top: 100%;
+  left: 0;
+  padding: 20px;
+  text-align: center;
+
+  &.is-open {
+    display: block;
+    height: 400px;
+    width: 100%;
+  }
 }

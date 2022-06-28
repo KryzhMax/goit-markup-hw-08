@@ -2,15 +2,29 @@
   background-color: var(--background-team-color);
 
   .team__list {
-    --card-item: 4;
+    @include mq(tab) {
+      --card-item: 2;
+    }
+    @include mq(desc) {
+      --card-item: 4;
+    }
   }
-
   .team__item {
+    width: 100%;
     background: #ffffff;
-
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    @include mq(mob-only) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .team__userpic {
+    width: 100%;
   }
 
   .team__text-wrapper {
@@ -19,7 +33,7 @@
   }
 
   .team__socials {
-    width: 270px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

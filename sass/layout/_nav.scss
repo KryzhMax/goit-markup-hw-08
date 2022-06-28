@@ -7,6 +7,9 @@
   padding: 0;
   margin-left: 93px;
   --card-gap: 50px;
+  @include mq(mob-only) {
+    display: none;
+  }
 }
 
 .nav__link {
