@@ -1,8 +1,28 @@
 .contacts {
   align-items: center;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  flex-direction: column;
 
-  --card-item: 2;
-  --card-gap: 30px;
+  @include mq(mob-only) {
+    margin-bottom: 64px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  @include mq(tab) {
+    align-items: flex-start;
+  }
+  @include mq(desc) {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
+  align-items: center;
   @include mq(mob-only) {
     display: none;
   }
@@ -14,28 +34,53 @@
   align-items: center;
 }
 
-.contacts__icon {
-  fill: currentColor;
-  margin-right: 10px;
-  align-items: center;
-}
-
 .contacts__info {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
   align-items: center;
-
-  font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
-  font-size: 14px;
-
+  // font-weight: 500;
+  // line-height: 1.15;
+  // letter-spacing: 0.02em;
+  // font-size: 14px;
+  @include fonts(26px, 500, 1.17, 0.02em);
   color: var(--main-color);
   transition: color var(--transition);
+
+  @include mq(mob) {
+    @include fonts(34px, 500, 1.17, 0.02em);
+  }
+  @include mq(mob-only) {
+    color: var(--accent-color);
+  }
+
+  @include mq(tab-only) {
+    @include fonts(12px, 500, 1.16, 0.02em);
+  }
+  @include mq(desc) {
+    @include fonts(14px, 500, 1.14, 0.02em);
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+}
+
+.mail {
+  @include mq(mob-only) {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #757575;
+  }
+  @include mq(tab-only) {
+    padding-top: 21px;
+  }
+}
+.tel {
+  @include mq(tab-only) {
+    padding-bottom: 21px;
   }
 }
