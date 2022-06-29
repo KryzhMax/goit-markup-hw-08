@@ -56,34 +56,30 @@
 }
 
 .menu-container {
-  // transform: translateX(100%);
-  top: 0;
-  left: 0;
-  text-align: center;
-
-  &.is-open {
+  @include mq(mob-only) {
+    top: 0;
+    left: 0;
+    position: fixed;
     display: flex;
     text-align: start;
     justify-content: space-between;
-    // transform: translateX(0);
-    // transition: var(--transition);
-  }
-
-  @include mq(mob-only) {
-    position: fixed;
     padding: 48px 40px;
     height: 100vh;
     width: 100%;
-    display: none;
-    position: absolute;
     flex-direction: column;
     z-index: 1;
     background-color: var(--main-white);
+    transform: translateX(100%);
+    transition: transform var(--transition);
   }
   @include mq(tab) {
     width: 100%;
     display: flex;
     align-items: center;
+  }
+
+  &.is-open {
+    transform: translateX(0);
   }
 }
 

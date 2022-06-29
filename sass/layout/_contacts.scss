@@ -16,7 +16,6 @@
   }
   @include mq(desc) {
     flex-direction: row;
-    align-items: baseline;
   }
 }
 .contacts__icon {
