@@ -777,6 +777,10 @@ body {
   color: var(--accent-color);
 }
 
+.current {
+  color: var(--accent-color);
+}
+
 .menu-social__list {
   display: flex;
   flex-wrap: nowrap;
