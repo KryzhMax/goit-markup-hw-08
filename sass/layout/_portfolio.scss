@@ -107,7 +107,11 @@
   }
 }
 
-.thumb__overlay > .thumb__overlay-text {
+.thumb__overlay-text {
+  @media screen and (max-width: 479px) {
+    @include fonts(14px, null, 1.56, null);
+  }
+
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;

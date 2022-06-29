@@ -808,7 +808,7 @@ body {
 }
 @media screen and (max-width: 479px) {
   .mob-menu__link {
-    font-size: 14px;
+    font-size: 11px;
   }
 }
 
@@ -1340,12 +1340,18 @@ body {
   transform: translateY(0);
 }
 
-.thumb__overlay > .thumb__overlay-text {
+.thumb__overlay-text {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   overflow: auto;
   color: var(--main-white);
+}
+@media screen and (max-width: 479px) {
+  .thumb__overlay-text {
+    font-size: 14px;
+    line-height: 1.56;
+  }
 }
 
 .service__link {
