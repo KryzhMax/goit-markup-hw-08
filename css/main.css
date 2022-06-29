@@ -804,6 +804,11 @@ body {
   letter-spacing: 0.02em;
   color: #2196f3;
 }
+@media screen and (max-width: 479px) {
+  .mob-menu__link {
+    font-size: 14px;
+  }
+}
 
 .mob-menu__link::after {
   content: "";
