@@ -571,6 +571,7 @@ body {
     background-color: var(--main-white);
     transform: translateX(100%);
     transition: transform var(--transition);
+    overflow: hidden;
   }
 }
 @media (min-width: 768px) {
@@ -714,6 +715,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 .nav__site-nav {
@@ -832,6 +834,8 @@ body {
   width: 100%;
   height: auto;
   padding: 118px 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (max-width: 767px) {
   .hero {

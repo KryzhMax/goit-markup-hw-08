@@ -71,6 +71,7 @@
     background-color: var(--main-white);
     transform: translateX(100%);
     transition: transform var(--transition);
+    overflow: hidden;
   }
   @include mq(tab) {
     width: 100%;
