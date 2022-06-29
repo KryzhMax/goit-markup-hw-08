@@ -2,10 +2,11 @@
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+  column-gap: 8px;
   @media screen and (min-width: 320px) and (max-width: 767px) {
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 8px;
+    row-gap: 15px;
   }
   @include mq(tab) {
     margin-bottom: 36px;
@@ -14,10 +15,6 @@
   @include mq(desc) {
     margin-bottom: 50px;
   }
-}
-
-.filter__item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .filter__btn {
