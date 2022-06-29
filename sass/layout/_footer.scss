@@ -14,10 +14,8 @@
 }
 
 .address {
-  font-size: 14px;
+  @include fonts(null, 500, null, null);
   font-style: inherit;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
   margin-top: 20px;
   // text-align: center;
 
@@ -30,15 +28,12 @@
 }
 
 .address__link {
+  @include fonts(null, 400, 1.71, null);
   display: block;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
   margin-top: 9px;
+  color: var(--footer-contacts);
 
   transition: color var(--transition);
-
-  color: var(--footer-contacts);
 }
 
 .footer-item-wrapper {
@@ -67,9 +62,7 @@
     text-align: left;
     &--right {
       margin-left: 70px;
-    }
-    .footer-item:last-of-type {
-      margin-left: auto;
+      width: 235px;
     }
   }
 }

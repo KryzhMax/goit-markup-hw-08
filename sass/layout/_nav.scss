@@ -30,25 +30,24 @@
 }
 .nav__link {
   display: block;
-
   color: var(--title-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
-
   transition: color var(--transition);
 
-  @include mq(mob-only) {
+  @include fonts(14px, 500, 1.15, 0.02em);
+
+  @media screen and (max-width: 479px) {
+    @include fonts(28px, 500, 1.15, 0.02em);
+  }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
     font-size: 40px;
   }
   @include mq(tab) {
     padding-top: 32px;
     padding-bottom: 32px;
   }
-  @include mq(desc) {
-    @include fonts(14px, 500, 1.14, 0.02em);
-  }
+  // @include mq(desc) {
+  //   @include fonts(14px, 500, 1.14, 0.02em);
+  // }
   &:hover,
   &:focus {
     color: var(--accent-color);

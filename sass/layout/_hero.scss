@@ -1,9 +1,8 @@
 .hero {
   text-align: center;
-  padding: 200px 0;
-  max-width: 1600px;
-  height: 600px;
   background-size: cover;
+  height: 400px;
+  padding: 118px 0;
   background-repeat: no-repeat;
   background-position: center;
   background-image: linear-gradient(
@@ -13,19 +12,27 @@
     ),
     url('../images/hero-bgc.jpg');
   background-color: #2f303a;
+  @include mq(mob) {
+  }
+  @include mq(desc) {
+    padding: 200px 0;
+    max-width: 1600px;
+    height: 600px;
+  }
 }
-
 .hero__title {
-  max-width: 696px;
-  margin: auto auto;
   justify-content: center;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
-
-  margin: 0 auto 30px;
-
   color: var(--main-white);
+  text-transform: uppercase;
+  margin: 0 auto 30px;
+  max-width: 360px;
+  @include mq(mob-only) {
+    @include fonts(26px, 900, 1.62, 0.06em);
+  }
+
+  @include mq(desc) {
+    @include fonts(44px, 900, 1.4, 0.06em);
+    max-width: 696px;
+  }
 }

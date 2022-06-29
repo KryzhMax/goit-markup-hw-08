@@ -70,6 +70,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: #757575;
   background-color: var(--main-white);
+  overflow-y: auto;
 }
 
 .visually-hidden {
@@ -129,16 +130,18 @@ body {
   padding-bottom: 94px;
 }
 .section__title {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+  line-height: 1.17;
   margin-bottom: 30px;
   text-align: center;
   color: var(--title-color);
 }
 @media (min-width: 1200px) {
   .section__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
     margin-bottom: 50px;
   }
 }
@@ -235,7 +238,6 @@ body {
 @media (min-width: 1200px) {
   .subscribe-form__label {
     margin-right: 12px;
-    margin-top: 20px;
   }
 }
 
@@ -281,6 +283,7 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity var(--transition), visibility var(--transition);
+  overflow-y: scroll;
 }
 .backdrop .is-hidden .modal {
   transform: translate(-50%, -50%) scale(0) rotate(45deg);
@@ -294,16 +297,25 @@ body {
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
   top: 50%;
   left: 50%;
   padding: 40px;
+  max-width: 100%;
   transform: translate(-50%, -50%);
   transition: transform var(--transition);
   background-color: var(--main-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 .modal__close-icon {
   fill: var(--title-color);
@@ -325,6 +337,11 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #ffffff;
 }
+@media screen and (max-width: 380px) {
+  .modal__close-btn {
+    top: 20px;
+  }
+}
 .modal__close-btn:hover .modal__close-icon {
   fill: var(--accent-color);
 }
@@ -332,11 +349,22 @@ body {
 .modal__title {
   font-size: 20px;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   margin-bottom: 12px;
-  width: 448px;
   color: var(--title-color);
+}
+@media screen and (max-width: 479px) {
+  .modal__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}
+@media (min-width: 1200px) {
+  .modal__title {
+    width: 448px;
+  }
 }
 
 .modal__text {
@@ -346,6 +374,12 @@ body {
   display: block;
   margin-bottom: 4px;
   color: #757575;
+}
+@media screen and (max-width: 424px) {
+  .modal__text {
+    font-size: 10px;
+    line-height: 1.666;
+  }
 }
 
 .modal__label {
@@ -394,20 +428,32 @@ body {
 }
 
 .modal__personal-data {
+  font-size: 12px;
+  line-height: 1.16;
   display: flex;
+  overflow: auto;
   margin-bottom: 30px;
-  padding-left: 14px;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   align-items: center;
   color: #757575;
   cursor: pointer;
 }
+@media screen and (max-width: 479px) {
+  .modal__personal-data {
+    font-size: 10px;
+    line-height: 1.16;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal__personal-data {
+    font-size: 14px;
+    line-height: 1.71;
+    padding-left: 14px;
+  }
+}
 
 .modal__public-agreement {
   color: var(--accent-color);
-  padding-left: 4px;
 }
 
 .modal__ticker {
@@ -417,6 +463,7 @@ body {
   width: 16px;
   height: 15px;
   margin-right: 9px;
+  flex-shrink: 0;
   fill: #fff;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 2px;
@@ -433,10 +480,14 @@ body {
 .placeholder {
   display: block;
   padding: 12px 16px;
-  width: 448px;
   resize: none;
   overflow: auto;
   min-height: 120px;
+}
+@media (min-width: 1200px) {
+  .placeholder {
+    width: 448px;
+  }
 }
 
 .placeholder:placeholder-shown {
@@ -576,12 +627,6 @@ body {
   }
 }
 
-.contacts__icon {
-  fill: currentColor;
-  margin-right: 10px;
-  align-items: center;
-}
-
 .contacts__info {
   display: flex;
   align-items: center;
@@ -591,6 +636,14 @@ body {
   letter-spacing: 0.02em;
   color: var(--main-color);
   transition: color var(--transition);
+}
+@media screen and (max-width: 479px) {
+  .contacts__info {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
 }
 @media (min-width: 480px) {
   .contacts__info {
@@ -605,7 +658,7 @@ body {
     color: var(--accent-color);
   }
 }
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (min-width: 768px) {
   .contacts__info {
     font-size: 12px;
     font-weight: 500;
@@ -621,17 +674,26 @@ body {
     letter-spacing: 0.02em;
     padding-top: 32px;
     padding-bottom: 32px;
+    align-items: center;
   }
 }
 .contacts__info:hover, .contacts__info:focus {
   color: var(--accent-color);
 }
 
+@media screen and (max-width: 479px) {
+  .mail {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+}
 @media (max-width: 767.98px) {
   .mail {
-    font-weight: 500;
     font-size: 24px;
-    line-height: 28px;
+    font-weight: 500;
+    line-height: 1.16;
     letter-spacing: 0.02em;
     color: #757575;
   }
@@ -686,13 +748,21 @@ body {
 .nav__link {
   display: block;
   color: var(--title-color);
-  font-weight: 500;
+  transition: color var(--transition);
   font-size: 14px;
+  font-weight: 500;
   line-height: 1.15;
   letter-spacing: 0.02em;
-  transition: color var(--transition);
 }
-@media (max-width: 767.98px) {
+@media screen and (max-width: 479px) {
+  .nav__link {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .nav__link {
     font-size: 40px;
   }
@@ -701,14 +771,6 @@ body {
   .nav__link {
     padding-top: 32px;
     padding-bottom: 32px;
-  }
-}
-@media (min-width: 1200px) {
-  .nav__link {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
   }
 }
 .nav__link:hover, .nav__link:focus {
@@ -754,27 +816,46 @@ body {
 
 .hero {
   text-align: center;
-  padding: 200px 0;
-  max-width: 1600px;
-  height: 600px;
   background-size: cover;
+  height: 400px;
+  padding: 118px 0;
   background-repeat: no-repeat;
   background-position: center;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bgc.jpg");
   background-color: #2f303a;
 }
+@media (min-width: 1200px) {
+  .hero {
+    padding: 200px 0;
+    max-width: 1600px;
+    height: 600px;
+  }
+}
 
 .hero__title {
-  max-width: 696px;
-  margin: auto auto;
   justify-content: center;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
-  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--main-white);
   text-transform: uppercase;
   margin: 0 auto 30px;
-  color: var(--main-white);
+  max-width: 360px;
+}
+@media (max-width: 767.98px) {
+  .hero__title {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+  }
+}
+@media (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    max-width: 696px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -804,10 +885,9 @@ body {
 }
 
 .advantages__title {
-  font-weight: 700;
   font-size: 14px;
-  line-height: 1.1428571429;
-  letter-spacing: 0.03em;
+  font-weight: 700;
+  line-height: 1.14;
   text-transform: uppercase;
   text-align: center;
   margin-top: 0;
@@ -833,7 +913,6 @@ body {
 .advantages__text {
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
 }
 
 @media screen and (max-width: 1199px) {
@@ -941,18 +1020,17 @@ body {
   fill: var(--main-white);
 }
 .team .team__member {
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.2;
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--title-color);
 }
 .team .team__position {
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.2;
   text-align: center;
-  letter-spacing: 0.03em;
   margin-bottom: 16px;
   margin-top: 10px;
 }
@@ -1009,10 +1087,8 @@ body {
 }
 
 .address {
-  font-size: 14px;
+  font-weight: 500;
   font-style: inherit;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
   margin-top: 20px;
   color: var(--main-white);
 }
@@ -1024,13 +1100,12 @@ body {
 }
 
 .address__link {
+  font-weight: 400;
+  line-height: 1.71;
   display: block;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
   margin-top: 9px;
-  transition: color var(--transition);
   color: var(--footer-contacts);
+  transition: color var(--transition);
 }
 
 @media (min-width: 768px) {
@@ -1065,9 +1140,7 @@ body {
   }
   .footer-item--right {
     margin-left: 70px;
-  }
-  .footer-item .footer-item:last-of-type {
-    margin-left: auto;
+    width: 235px;
   }
 }
 

@@ -21,16 +21,11 @@
 }
 
 .advantages__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
+  @include fonts(14px, 700, 1.14, null);
   text-transform: uppercase;
   text-align: center;
-
   margin-top: 0;
   margin-bottom: 10px;
-
   color: var(--title-color);
   @include mq(tab) {
     text-align: start;
@@ -49,7 +44,5 @@
 }
 
 .advantages__text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include fonts(14px, null, 1.71, null);
 }

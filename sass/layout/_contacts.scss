@@ -28,23 +28,17 @@
   }
 }
 
-.contacts__icon {
-  fill: currentColor;
-  margin-right: 10px;
-  align-items: center;
-}
-
 .contacts__info {
   display: flex;
   align-items: center;
-  // font-weight: 500;
-  // line-height: 1.15;
-  // letter-spacing: 0.02em;
-  // font-size: 14px;
+
   @include fonts(26px, 500, 1.17, 0.02em);
   color: var(--main-color);
   transition: color var(--transition);
 
+  @media screen and (max-width: 479px) {
+    @include fonts(24px, 500, 1.17, 0.02em);
+  }
   @include mq(mob) {
     @include fonts(34px, 500, 1.17, 0.02em);
   }
@@ -52,13 +46,14 @@
     color: var(--accent-color);
   }
 
-  @include mq(tab-only) {
+  @include mq(tab) {
     @include fonts(12px, 500, 1.16, 0.02em);
   }
   @include mq(desc) {
     @include fonts(14px, 500, 1.14, 0.02em);
     padding-top: 32px;
     padding-bottom: 32px;
+    align-items: center;
   }
 
   &:hover,
@@ -68,11 +63,11 @@
 }
 
 .mail {
+  @media screen and (max-width: 479px) {
+    @include fonts(18px, 500, 1.17, 0.02em);
+  }
   @include mq(mob-only) {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 0.02em;
+    @include fonts(24px, 500, 1.16, 0.02em);
     color: #757575;
   }
   @include mq(tab-only) {
@@ -83,4 +78,7 @@
   @include mq(tab-only) {
     padding-bottom: 21px;
   }
+  // @include mq(desc) {
+  //   align-items: baseline;
+  // }
 }

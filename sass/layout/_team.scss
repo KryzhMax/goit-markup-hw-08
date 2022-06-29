@@ -77,22 +77,16 @@
 } */
 
   .team__member {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.2;
+    @include fonts(16px, 500, 1.2, null);
     text-align: center;
-    letter-spacing: 0.03em;
-
     color: var(--title-color);
   }
 
   .team__position {
-    font-size: 16px;
-    line-height: 1.2;
+    @include fonts(16px, 400, 1.2, null);
     text-align: center;
-    letter-spacing: 0.03em;
-    margin-bottom: 16px;
 
+    margin-bottom: 16px;
     margin-top: 10px;
   }
 }
