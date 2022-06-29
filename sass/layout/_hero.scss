@@ -1,23 +1,62 @@
 .hero {
   text-align: center;
   background-size: cover;
-  height: 400px;
-  padding: 118px 0;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url('../images/hero-bgc.jpg');
   background-color: #2f303a;
-  @include mq(mob) {
+  width: 100%;
+  height: auto;
+  padding: 118px 0;
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/adaptive/mob/mob-herobackgroundimg.jpg');
+    @include mq(retina) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/adaptive/mob/mob-herobackgroundimg@2x.jpg');
+    }
+  }
+
+  @include mq(tab) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/adaptive/tab/tab-herobackgroundimg.jpg');
+    @include mq(retina) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/adaptive/tab/tab-herobackgroundimg@2x.jpg');
+    }
   }
   @include mq(desc) {
     padding: 200px 0;
     max-width: 1600px;
-    height: 600px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/adaptive/desk/desk-herobackgroundimg.jpg');
+    @include mq(retina) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/adaptive/desk/desk-herobackgroundimg@2x.jpg');
+    }
   }
 }
 .hero__title {
